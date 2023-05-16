@@ -13,7 +13,7 @@ def filter_constant_columns(csv_file='all_data.csv'):
     my_data=my_data.drop(['Patient_id'],axis=1)
     my_data=my_data.dropna() 
     my_data=pd.DataFrame(data=sel.fit_transform(my_data),index=my_data.index, columns=sel.get_feature_names_out(None))
-    my_data.to_csv('/home/irit/Documents/Myeloma/all_data_filtered.csv')
+    my_data.to_csv('/home/syrine/Myeloma project/all_data_filtered.csv')
     return my_data
 
 # %%

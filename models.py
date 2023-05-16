@@ -49,7 +49,7 @@ compare_all=False
 filter_var=False
 only_expressed_genes=False
 cv_decomposition=False
-feature_selection_lasso=True
+feature_selection_lasso=False
 feature_selection_boruta=False
 
 dimension_reduction_pca=False

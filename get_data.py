@@ -10,7 +10,7 @@ import csv
 #get all genes names from one patient to create header of all_data file
 header=['Patient_id']
 def get_header():
-    csv_file='/home/irit/Documents/Myeloma/data/900-04_TPM.csv'
+    csv_file='/home/syrine/Myeloma project/data/900-04_TPM.csv'
     example=pd.read_csv(csv_file)
     patient_id=csv_file.split('_')[0][-6:] #get patient id from csv file name
     example[['GeneID', 'Patient '+patient_id]]=example['GeneID\t'+patient_id].str.split("\t", expand = True)
@@ -50,7 +50,7 @@ def get_patient_response(patient_id):
 
 # %%
 #Create one big matrix: lines are patients, columns are genes, last column is the label (MRD+ or MRD-)
-directory = '/home/irit/Documents/Myeloma/data'
+directory = '/home/syrine/Myeloma project/data'
 pathlist = Path(directory).glob('*.csv')
 headerList=get_header()
 not_found=0
